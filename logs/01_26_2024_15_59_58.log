@@ -1,0 +1,33 @@
+[2024-01-26 15:59:58,606] 20 root - INFO - This is my 1st testing
+[2024-01-26 15:59:59,120] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.18.0.12:3000
+[2024-01-26 15:59:59,121] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-01-26 16:02:21,679] 96 werkzeug - INFO - 172.18.0.2 - - [26/Jan/2024 16:02:21] "GET / HTTP/1.1" 200 -
+[2024-01-26 16:02:21,734] 96 werkzeug - INFO - 172.18.0.2 - - [26/Jan/2024 16:02:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-01-26 16:02:28,265] 96 werkzeug - INFO - 172.18.0.2 - - [26/Jan/2024 16:02:28] "GET /predict HTTP/1.1" 200 -
+[2024-01-26 16:02:41,283] 53 root - INFO - Dataframe Gathered
+[2024-01-26 16:02:41,351] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "/config/workspace/src/pipeline/prediction_pipeline.py", line 21, in predict
+    prediction = model.predict(scaled_feature)
+NameError: name 'model' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/workspace/env/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/workspace/env/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/workspace/env/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/workspace/env/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 31, in predict_datapoint
+    pred=predict_pipeline.predict(final_data)
+  File "/config/workspace/src/pipeline/prediction_pipeline.py", line 26, in predict
+    raise customexception(e,sys)
+src.exception.exception.customexception: Error occured in python script name [/config/workspace/src/pipeline/prediction_pipeline.py] line number [<traceback object at 0x7febd0e7c3c0>] error message [name 'model' is not defined]
+[2024-01-26 16:02:41,352] 96 werkzeug - INFO - 172.18.0.2 - - [26/Jan/2024 16:02:41] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
