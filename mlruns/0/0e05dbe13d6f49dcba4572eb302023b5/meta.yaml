@@ -1,0 +1,15 @@
+artifact_uri: file:///config/workspace/mlruns/0/0e05dbe13d6f49dcba4572eb302023b5/artifacts
+end_time: 1706364856977
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0e05dbe13d6f49dcba4572eb302023b5
+run_name: glamorous-crab-750
+run_uuid: 0e05dbe13d6f49dcba4572eb302023b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706364853959
+status: 3
+tags: []
+user_id: abc

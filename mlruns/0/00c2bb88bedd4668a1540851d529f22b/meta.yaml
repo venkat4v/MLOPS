@@ -1,0 +1,15 @@
+artifact_uri: file:///config/workspace/mlruns/0/00c2bb88bedd4668a1540851d529f22b/artifacts
+end_time: 1706364519221
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 00c2bb88bedd4668a1540851d529f22b
+run_name: unleashed-shoat-798
+run_uuid: 00c2bb88bedd4668a1540851d529f22b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706364519201
+status: 4
+tags: []
+user_id: abc
